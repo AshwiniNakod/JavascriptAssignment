@@ -8,29 +8,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
-    <h1>Loan Application</h1>
-    <div id="error_msg"></div>
+    
     <form action="thanks.html" method="GET" id="form" name="myForm">
         <div class="container">
-        <input type="text" placeholder="Enter Full Name" id="fullName" ><span class="formerror" name="fullname"></span>
-            <input type="email" placeholder="Enter Email" id="email" >
-            <input type="text" placeholder="Enter PAN" id="pan" maxlength="10">
-            <div class="words">
-                <input type="number" placeholder="Enter Loan Amount" id="loanAmount" maxlength="9" >
-                <span id="word">In Word<span>
-            </div>
-            <div class="captch">
-               <div id="gen_captcha">
-                Add <span id="n1">1</span>
-                    +
-                <span id="n2">20</span>
-                </div>
+            <h1>Loan Application</h1>
+            <hr class="hr">
+            <div>
+
                 <div>
+                    <input type="text" placeholder="Enter Full Name" id="fullName" required>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <input type="email" placeholder="Enter Email" id="email" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text" placeholder="Enter PAN" id="pan" maxlength="10" required>
+                </div>
+            </div>
+            <div>
+            <div>
+                    <input type="number" placeholder="Enter Loan Amount" id="loanAmount" maxlength="9" required>
+            </div>
+            </div>
+            <div>
+                <div class="words">
+                    <span id="word">In Word<span>
+                </div>
+            </div>
+                <div class="captch">
+                    <div id="gen_captcha">
+                        Add <span id="n1">1</span>
+                        +
+                        <span id="n2">20</span>
+                    </div>
+                    <div class="Ucaptcha">
+                        <input type="number" placeholder="Enter captcha" id="user_captcha" required>
+                    </div>
+                </div>
+            <div class="btn">
+                <div >
                     <button id="new_captch" onclick="captch()">New Captcha</button>
                 </div>
+                <div>
+                    <button type="submit" id="submit" >Submit</button>
+                </div>
             </div>
-            <input type="number" placeholder="Enter captcha" id="user_captcha" >
-            <button type="submit" id="submit" >Submit</button>
         </form>
     </div>
 </body>

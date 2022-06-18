@@ -14,8 +14,8 @@
         <p id="msg"><p>
             <form action="">
                 <input type="text" placeholder="OTP" id="opt" maxlength="4">
-                <button id="validate">Validate</button>   
-                
+                <button id="validate">Submit</button>   
+                <p id="errorMsg"><p>
             </form>
         </div>
             <script>
@@ -26,7 +26,9 @@
             console.log(f,em);
 
             let fn=f.split(' ')
-            document.getElementById("msg").innerText=`Dear ${fn[0]},
+            let msg=document.getElementById("msg")
+            let errorMsg=document.getElementById("errorMsg")
+            msg.innerText=`Dear ${fn[0]},
              Thank you for your inquiry.A 4 digit verification number has been sent to your email ${em}.
              Please enter it in the following box and submit for confirmation:`
 
@@ -35,12 +37,17 @@
 
             validate.addEventListener('click',e=>{
                 let u_opt=opt.value;
-                if(rn== u_opt){
-                    document.write("Validation SuccessFully!")
-                }
-                else{
-                    alert("Please Enter correct opt!")
-                }
+                
+                
+                    if(rn== u_opt){
+                        document.write("Validation SuccessFully!")
+                        window.location.href="http://pixel6.co/";
+                    }
+                    else{
+                        document.write("404 Error")     
+                    }
+                
+                
             })
 
         </script>

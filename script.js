@@ -39,7 +39,7 @@ user_captcha.addEventListener('change',e=>{
     let sum=parseInt(num1) + parseInt(num2);
     let res=parseInt(user_captcha.value)
     if(res == sum){
-        console.log('valid')
+        // console.log('valid')
     }else{
         console.log('not valid')
         alert('Enter correct captcha')
@@ -50,10 +50,10 @@ function nameValidation(){
     let name=fullName.value
     let regex=/^([a-zA-Z]+){4,10}\s([a-zA-Z]+){4,10}$/
     if(regex.test(name)){
-        console.log(" matched")
+        // console.log(" matched")
     }   
     else{
-        console.log(" Name should be minmum 4 characters with two words")
+        // console.log(" Name should be minmum 4 characters with two words")
         alert(' Name should be minmum 4 characters with two words')
         return false
     }
@@ -69,10 +69,10 @@ function emailValidation(){
     let Email=email.value;
     let e_reg=/^([0-9a-zA-Z_\-\.]+)@([_\.\-0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/    ;
     if(e_reg.test(Email)){
-        console.log("Email is validate")
+        // console.log("Email is validate")
         localStorage.setItem('email_id',Email);
     }else{
-        console.log("Email is not validate")
+        // console.log("Email is not validate")
         alert('Enter Valid Email Address')
         
     }
@@ -82,7 +82,7 @@ function panNoValidation(){
     let pan_no=pan.value;  
     let pan_reg=/^([A-Z]+){5}([0-9]+){4}([A-Z]+){1}$/
     if(pan_reg.test(pan_no)){
-        console.log("Pan no is validate")
+        // console.log("Pan no is validate")
     }else
     {
         // console.log("Pan_no not is validate")
