@@ -18,7 +18,9 @@ n2.innerText=Math.floor(Math.random()*10)
 let num1=n1.innerText;
 let num2=n2.innerText;
 
-
+form.addEventListener('submit',e=>{
+    captch()
+})
 fullName.addEventListener('change',(e)=>{
     // console.log("name validate");
     nameValidation();
@@ -147,13 +149,13 @@ function captch(){
     console.log(str);
     document.querySelector("#gen_captcha").innerHTML=str;
     let sum=random_num1+random_num2;
-    console.log(sum)
+    // console.log(sum)
     return sum
     
 }
-new_captch.addEventListener('onclick',(e)=>{
-    captch();
+// new_captch.addEventListener('onclick',(e)=>{
+//     captch();
 
-})
+// })
 
 
